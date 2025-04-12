@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 
 
-cconst io = new Server(server, {
+const io = new Server(server, {
   cors: {
     origin: ["https://drugtalk.up.railway.app/"],
   },
