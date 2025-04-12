@@ -13,7 +13,11 @@ import { app, server } from "./lib/socket.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
+
+app.listen(PORT, () => {
+  console.log(`server is running on PORT: ${PORT}`);
+});
 const __dirname = path.resolve();
 
 app.use(express.json());
