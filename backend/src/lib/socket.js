@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://drugtalk.up.railway.app/"],
+    origin: ["https://drugtalk.up.railway.app"],
   },
 });
 
