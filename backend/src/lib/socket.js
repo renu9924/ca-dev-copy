@@ -4,14 +4,13 @@ import express from "express";
 
 const app = express();
 const server = http.createServer(app);
-const PORT = process.env.PORT || 3000;
 
-const io = new Server(server, {
-  cors({
-    origin: [process.env.CLIENT_URL, `http://localhost:${PORT}`],
-    credentials: true,
-  })
-);
+
+cconst io = new Server(server, {
+  cors: {
+    origin: ["https://drugtalk.up.railway.app/"],
+  },
+});
 
 export function getReceiverSocketId(userId) {
   return userSocketMap[userId];
